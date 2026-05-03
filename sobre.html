@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sobre o SpotMyDeal — Contexto SoulUp, problema, solução e tecnologias." />
+  <title>Sobre — SpotMyDeal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .about-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+
+    .about-block.reverse { direction: rtl; }
+    .about-block.reverse > * { direction: ltr; }
+
+    .about-visual {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--border-strong), transparent, var(--border-strong));
+      z-index: -1;
+    }
+
+    .stat-highlight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .stat-highlight:last-child { margin-bottom: 0; }
+
+    .stat-big {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+    }
+
+    .stat-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      padding: 8px 18px;
+      background: var(--cyan-glow);
+      border: 1px solid var(--border-strong);
+      border-radius: 20px;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+
+    .roadmap {
+      margin-top: 60px;
+    }
+
+    .roadmap-title {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 4px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .roadmap-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .roadmap-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 32px;
+      position: relative;
+    }
+
+    .roadmap-item::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .roadmap-item:last-child::before { display: none; }
+
+    .roadmap-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--dark2);
+      border: 2px solid var(--border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .roadmap-dot.done {
+      background: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    .roadmap-content h4 {
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .roadmap-content p {
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 900px) {
+      .about-block { grid-template-columns: 1fr; gap: 40px; direction: ltr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">S</div>
+          <span class="nav-logo-text">Spot<span>My</span>Deal</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html" class="active">Sobre</a></li>
+          <li><a href="solucao.html">Solução</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Equipe</a></li>
+          <li><a href="contato.html" class="nav-cta">Contato</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="solucao.html">Solução</a>
+      <a href="demo.html">Demo</a>
+      <a href="faq.html">FAQ</a>
+      <a href="integrantes.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero" id="contexto">
+      <div class="container">
+        <span class="section-label">Contexto & Propósito</span>
+        <h1>Sobre o <span style="color:var(--cyan)">Projeto</span></h1>
+        <p style="max-width: 600px; margin-top: 16px;">SpotMyDeal nasce da parceria entre estudantes da FIAP e a SoulUp — uma empresa comprometida com a redução de CO₂ e o upcycling de resíduos.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- SOULUP CONTEXT -->
+        <div class="about-block">
+          <div>
+            <span class="section-label">A Empresa</span>
+            <h2 class="section-title">O ecossistema <span>SoulUp</span></h2>
+            <p>A SoulUp é uma empresa com missão clara: transformar o descarte correto de resíduos em uma fonte de valor para as pessoas. Seus analytics identificaram um problema crítico — a dificuldade de atrair novos usuários e reativar perfis existentes que haviam abandonado a plataforma.</p>
+            <p style="margin-top: 16px;">A análise dos dados revelou oportunidade de usar gatilhos psicológicos para criar engajamento real, transformando uma ação ambiental em uma experiência de disputa e conquista.</p>
+            <div class="pill-list">
+              <span class="pill">♻️ Upcycling</span>
+              <span class="pill">🌱 Redução CO₂</span>
+              <span class="pill">⚡ Energia Limpa</span>
+              <span class="pill">🚌 Mobilidade</span>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="stat-highlight">
+              <span class="stat-big">CO₂↓</span>
+              <span class="stat-desc">Redução de emissões por descarte correto</span>
+            </div>
+            <div class="stat-highlight">
+              <span class="stat-big">♻️</span>
+              <span class="stat-desc">Upcycling: lixo → pontos → valor real</span>
+            </div>
+            <div class="stat-highlight">
+              <span class="stat-big">+3k</span>
+              <span class="stat-desc">Meta de novos usuários ativos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- O PROBLEMA -->
+        <div class="about-block reverse">
+          <div class="about-visual">
+            <div class="stat-highlight">
+              <span class="stat-big">😴</span>
+              <span class="stat-desc">Usuários existentes, porém inativos na plataforma</span>
+            </div>
+            <div class="stat-highlight">
+              <span class="stat-big">🚫</span>
+              <span class="stat-desc">Dificuldade em atrair novos perfis de usuário</span>
+            </div>
+            <div class="stat-highlight">
+              <span class="stat-big">📉</span>
+              <span class="stat-desc">Baixo engajamento sem mecanismo de disputa</span>
+            </div>
+          </div>
+          <div>
+            <span class="section-label">O Problema</span>
+            <h2 class="section-title">Por que os usuários <span>saem?</span></h2>
+            <p>Os analytics da SoulUp identificaram dois grupos problemáticos: novos usuários que nunca conheceram o app e usuários existentes que se tornaram inativos. Ambos compartilham o mesmo problema — falta de motivação contínua para engajar com a plataforma.</p>
+            <p style="margin-top: 16px;">Sem um mecanismo de retenção baseado em comportamento humano real, qualquer esforço de aquisição se perde rapidamente.</p>
+          </div>
+        </div>
+
+        <!-- A SOLUÇÃO -->
+        <div class="about-block">
+          <div>
+            <span class="section-label">A Solução</span>
+            <h2 class="section-title">SpotMyDeal: <span>Loot Tracker</span></h2>
+            <p>O SpotMyDeal é um mecanismo de gamificação baseado em disputa real. Usuários competem entre si pela captura de cupons de desconto disponibilizados por estabelecimentos parceiros da SoulUp.</p>
+            <p style="margin-top: 16px;">O sistema usa três gatilhos psicológicos comprovados: <strong style="color:var(--white)">ancoragem</strong> (ver o que outros já têm), <strong style="color:var(--white)">comparação</strong> (ranking em tempo real) e <strong style="color:var(--white)">disputa</strong> (senso de urgência para não ficar de fora).</p>
+            <a href="solucao.html" class="btn btn-primary" style="margin-top: 28px;">Ver solução completa →</a>
+          </div>
+          <div class="about-visual">
+            <div class="stat-highlight">
+              <span class="stat-big">🎯</span>
+              <span class="stat-desc">Ancoragem: o usuário vê o que pode conquistar</span>
+            </div>
+            <div class="stat-highlight">
+              <span class="stat-big">⚔️</span>
+              <span class="stat-desc">Disputa: competição em tempo real por cupons</span>
+            </div>
+            <div class="stat-highlight">
+              <span class="stat-big">🏆</span>
+              <span class="stat-desc">Comparação: ranking que gera desconforto de ausência</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROADMAP -->
+        <div class="roadmap">
+          <p class="roadmap-title">— Roadmap do Projeto</p>
+          <div class="roadmap-list">
+            <div class="roadmap-item">
+              <div class="roadmap-dot done">✓</div>
+              <div class="roadmap-content">
+                <h4>Discovery & Analytics SoulUp</h4>
+                <p>Análise dos dados da empresa para identificar os perfis inativos e oportunidades de engajamento.</p>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-dot done">✓</div>
+              <div class="roadmap-content">
+                <h4>Ideação do Mecanismo de Loot Tracker</h4>
+                <p>Definição do sistema de disputa, regras de coleta e conversão de pontos em benefícios reais.</p>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-dot done">✓</div>
+              <div class="roadmap-content">
+                <h4>Desenvolvimento do Site (Sprint 1)</h4>
+                <p>Construção da interface web completa com HTML, CSS e JavaScript — entrega FIAP.</p>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-dot">→</div>
+              <div class="roadmap-content">
+                <h4>Integração com App SoulUp</h4>
+                <p>Conexão do mecanismo SpotMyDeal com o ecossistema real da SoulUp.</p>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-dot">→</div>
+              <div class="roadmap-content">
+                <h4>Piloto com Parceiros</h4>
+                <p>Teste com estabelecimentos parceiros reais e medição de impacto na reativação de usuários.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">S</div>
+            <span class="nav-logo-text">Spot<span>My</span>Deal</span>
+          </a>
+          <p>Gamificação de cupons para atração e reativação de usuários. Um projeto FIAP em parceria com a SoulUp.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="solucao.html">Solução</a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Projeto</h4>
+          <ul>
+            <li><a href="sobre.html#contexto">Contexto SoulUp</a></li>
+            <li><a href="solucao.html#mecanismo">Loot Tracker</a></li>
+            <li><a href="solucao.html#gatilhos">Gatilhos Psicológicos</a></li>
+            <li><a href="demo.html">Demonstração</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: var(--text-muted);">© 2025 SpotMyDeal · Projeto FIAP · Todos os direitos reservados.</p>
+        <span class="footer-badge">FIAP · 1º SPRINT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

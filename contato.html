@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contato SpotMyDeal — Entre em contato com a equipe do projeto." />
+  <title>Contato — SpotMyDeal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* INFO */
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-info-item:last-child { border-bottom: none; }
+
+    .ci-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--cyan-glow);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .ci-label {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .ci-value {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    /* FORM */
+    .form-card {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+
+    .form-title {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .field-label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .field-input {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all var(--transition);
+    }
+
+    .field-input::placeholder { color: var(--text-muted); }
+
+    .field-input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px var(--cyan-glow);
+    }
+
+    .field-input.input-error {
+      border-color: #ff4444;
+      box-shadow: 0 0 0 3px rgba(255,68,68,0.15);
+    }
+
+    .field-input.input-ok { border-color: #00e676; }
+
+    textarea.field-input {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    select.field-input { cursor: pointer; }
+
+    .field-error {
+      font-size: 0.75rem;
+      color: #ff6b6b;
+      margin-top: 6px;
+      display: block;
+      min-height: 18px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--cyan);
+      color: var(--dark);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--transition);
+      margin-top: 8px;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      background: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--cyan-glow-strong);
+    }
+
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-feedback {
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      margin-top: 16px;
+      font-weight: 500;
+    }
+
+    .feedback-success {
+      background: rgba(0,230,118,0.1);
+      border: 1px solid rgba(0,230,118,0.3);
+      color: #00e676;
+    }
+
+    .feedback-error {
+      background: rgba(255,68,68,0.1);
+      border: 1px solid rgba(255,68,68,0.3);
+      color: #ff6b6b;
+    }
+
+    @media (max-width: 850px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .form-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">S</div>
+          <span class="nav-logo-text">Spot<span>My</span>Deal</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="solucao.html">Solução</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Equipe</a></li>
+          <li><a href="contato.html" class="nav-cta active">Contato</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="solucao.html">Solução</a>
+      <a href="demo.html">Demo</a>
+      <a href="faq.html">FAQ</a>
+      <a href="integrantes.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Fale conosco</span>
+        <h1><span style="color:var(--cyan)">Contato</span></h1>
+        <p style="max-width: 500px; margin-top: 16px;">Tem dúvidas sobre o projeto, a solução ou quer saber mais sobre a parceria SoulUp? Manda a mensagem.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- INFO -->
+          <div>
+            <span class="section-label">Informações</span>
+            <h2 class="section-title" style="margin-bottom: 32px;">Onde <span>nos achar</span></h2>
+
+            <div class="contact-info-item">
+              <div class="ci-icon">🎓</div>
+              <div>
+                <div class="ci-label">Instituição</div>
+                <div class="ci-value">FIAP — Faculdade de Informática e Administração Paulista</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="ci-icon">🏢</div>
+              <div>
+                <div class="ci-label">Parceria</div>
+                <div class="ci-value">SoulUp — Upcycling & Sustentabilidade</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="ci-icon">👥</div>
+              <div>
+                <div class="ci-label">Equipe</div>
+                <div class="ci-value">
+                  Gabriel Augusto · Nycolas Melo<br>
+                  Rodrigo Banharelli · Tayna Jimenes
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="ci-icon">💼</div>
+              <div>
+                <div class="ci-label">LinkedIn da Equipe</div>
+                <div class="ci-value">
+                  <a href="integrantes.html" style="color: var(--cyan);">Ver todos os perfis →</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="ci-icon">⏱</div>
+              <div>
+                <div class="ci-label">Resposta</div>
+                <div class="ci-value">Em até 48 horas úteis</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMULÁRIO -->
+          <div class="form-card">
+            <div class="form-title">— Envie sua mensagem</div>
+            <form id="contact-form" novalidate>
+
+              <div class="form-row">
+                <div class="field-group">
+                  <label class="field-label" for="nome">Nome *</label>
+                  <input class="field-input" type="text" id="nome" name="nome" placeholder="Seu nome completo" />
+                  <span class="field-error"></span>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="email">E-mail *</label>
+                  <input class="field-input" type="email" id="email" name="email" placeholder="seu@email.com" />
+                  <span class="field-error"></span>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="assunto">Assunto *</label>
+                <select class="field-input" id="assunto" name="assunto">
+                  <option value="">Selecione um assunto</option>
+                  <option value="projeto">Sobre o projeto SpotMyDeal</option>
+                  <option value="soulup">Parceria SoulUp</option>
+                  <option value="fiap">Trabalho FIAP</option>
+                  <option value="demo">Dúvidas sobre a Demo</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <span class="field-error"></span>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="mensagem">Mensagem *</label>
+                <textarea class="field-input" id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui (mínimo 20 caracteres)..."></textarea>
+                <span class="field-error"></span>
+              </div>
+
+              <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">S</div>
+            <span class="nav-logo-text">Spot<span>My</span>Deal</span>
+          </a>
+          <p>Gamificação de cupons para atração e reativação de usuários. Um projeto FIAP em parceria com a SoulUp.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="solucao.html">Solução</a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Projeto</h4>
+          <ul>
+            <li><a href="sobre.html#contexto">Contexto SoulUp</a></li>
+            <li><a href="solucao.html#mecanismo">Loot Tracker</a></li>
+            <li><a href="solucao.html#gatilhos">Gatilhos Psicológicos</a></li>
+            <li><a href="demo.html">Demonstração</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: var(--text-muted);">© 2025 SpotMyDeal · Projeto FIAP · Todos os direitos reservados.</p>
+        <span class="footer-badge">FIAP · 1º SPRINT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>

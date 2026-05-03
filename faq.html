@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FAQ SpotMyDeal — Perguntas frequentes sobre o projeto e a solução." />
+  <title>FAQ — SpotMyDeal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+
+    .faq-item.open { border-color: var(--border-strong); }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 24px;
+      cursor: pointer;
+      transition: background var(--transition);
+      gap: 16px;
+    }
+
+    .faq-question:hover { background: rgba(255,255,255,0.02); }
+
+    .faq-q-text {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.3px;
+      flex: 1;
+    }
+
+    .faq-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--cyan-glow);
+      border: 1px solid var(--border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--cyan);
+      flex-shrink: 0;
+      transition: all var(--transition);
+    }
+
+    .faq-item.open .faq-icon {
+      background: var(--cyan);
+      color: var(--dark);
+    }
+
+    .faq-answer {
+      padding: 0 24px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .faq-answer p { padding-bottom: 20px; }
+
+    .faq-category {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin: 48px 0 20px;
+    }
+
+    .faq-category:first-child { margin-top: 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">S</div>
+          <span class="nav-logo-text">Spot<span>My</span>Deal</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="solucao.html">Solução</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="integrantes.html">Equipe</a></li>
+          <li><a href="contato.html" class="nav-cta">Contato</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="solucao.html">Solução</a>
+      <a href="demo.html">Demo</a>
+      <a href="faq.html">FAQ</a>
+      <a href="integrantes.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Dúvidas frequentes</span>
+        <h1>FAQ</h1>
+        <p style="max-width: 540px; margin-top: 16px;">Respostas sobre o SpotMyDeal, o mecanismo de loot tracker e o projeto FIAP em parceria com a SoulUp.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="faq-list">
+
+          <p class="faq-category">— Sobre o Projeto</p>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">O que é o SpotMyDeal?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>O SpotMyDeal é um mecanismo de gamificação desenvolvido para o ecossistema da SoulUp. Ele funciona como um "loot tracker" — um sistema onde usuários disputam entre si a coleta de cupons de desconto disponibilizados por estabelecimentos parceiros, acumulando pontos a partir do descarte correto de resíduos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">Qual é a relação com a SoulUp?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>A SoulUp é uma empresa focada em sustentabilidade — redução de CO₂ e upcycling de resíduos. Seus analytics identificaram dificuldade em atrair novos usuários e reativar perfis inativos. O SpotMyDeal nasceu como solução a esse problema, usando gamificação para criar engajamento real na plataforma.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">Este é um projeto acadêmico ou produto real?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>É um projeto acadêmico desenvolvido na FIAP (1º Sprint), mas com base em dados e necessidades reais da SoulUp. O mecanismo foi idealizado para ser implementável no ecossistema real da empresa, com roadmap de piloto com parceiros definido.</p>
+            </div>
+          </div>
+
+          <p class="faq-category">— Sobre o Loot Tracker</p>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">Como funciona o sistema de pontos?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>O usuário acumula pontos ao realizar descartes corretos de resíduos nos pontos parceiros da SoulUp. Esses pontos são usados como "moeda" para competir pela captura de cupons disponíveis na arena de disputa do SpotMyDeal.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">O que são os gatilhos psicológicos do sistema?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>O SpotMyDeal usa três gatilhos comprovados pela psicologia comportamental: <strong>Ancoragem</strong> — o usuário vê o que outros já conquistaram e cria uma referência do que "deveria ter"; <strong>Comparação</strong> — o ranking em tempo real transforma a posição em status social; e <strong>Disputa</strong> — cupons limitados e urgência de não perder para outros players.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">Como os cupons podem ser convertidos em benefícios?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Os cupons coletados podem ser convertidos em descontos diretos em estabelecimentos parceiros, crédito para pagamento de contas de energia elétrica, ou saldo para uso no transporte público. Em versões futuras, também estão previstos cashback e transferência para conta bancária.</p>
+            </div>
+          </div>
+
+          <p class="faq-category">— Sobre a Equipe</p>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">Quem desenvolveu o SpotMyDeal?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>O projeto foi desenvolvido por quatro estudantes da FIAP: Gabriel Augusto (RM 573120), Nycolas Melo Escobar (RM 573052), Rodrigo Banharelli de Souza (RM 570539) e Tayna Jimenes Silva (RM 569337). Conheça a equipe na <a href="integrantes.html" style="color: var(--cyan);">página de integrantes</a>.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-q-text">Como posso entrar em contato com a equipe?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Use o formulário na <a href="contato.html" style="color: var(--cyan);">página de contato</a> ou acesse os perfis do LinkedIn de cada integrante na <a href="integrantes.html" style="color: var(--cyan);">página da equipe</a>. Respondemos em até 48 horas.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">S</div>
+            <span class="nav-logo-text">Spot<span>My</span>Deal</span>
+          </a>
+          <p>Gamificação de cupons para atração e reativação de usuários. Um projeto FIAP em parceria com a SoulUp.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="solucao.html">Solução</a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Projeto</h4>
+          <ul>
+            <li><a href="sobre.html#contexto">Contexto SoulUp</a></li>
+            <li><a href="solucao.html#mecanismo">Loot Tracker</a></li>
+            <li><a href="solucao.html#gatilhos">Gatilhos Psicológicos</a></li>
+            <li><a href="demo.html">Demonstração</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: var(--text-muted);">© 2025 SpotMyDeal · Projeto FIAP · Todos os direitos reservados.</p>
+        <span class="footer-badge">FIAP · 1º SPRINT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>
