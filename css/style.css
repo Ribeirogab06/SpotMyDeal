@@ -473,11 +473,11 @@ footer {
     /* 4. Faz a imagem cobrir o botão todo */
     width: 100%;
     height: 100%;
-    
     /* 5. Garante que a imagem não estique, mas preencha o espaço */
     object-fit: cover; 
-    
+  
     display: block;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Efeito de hover opcional para manter o estilo neon */
