@@ -532,66 +532,76 @@ var translations = {
    ============================================ */
 
 /* Pega o idioma salvo ou usa PT como padrão */
-function getLang() {
-  return localStorage.getItem('smd-lang') || 'pt';
+function traduzirPagina() {
+    var flagImg = document.querySelector('.flag-img');
+    
+    // 1. Identifica o idioma atual baseado na imagem que está na tela
+    // Se a imagem atual for EUA, queremos mudar para INGLÊS e mostrar a bandeira do BRASIL
+    if (flagImg.src.includes('eua.png')) {
+        updateTexts('en');
+        flagImg.src = 'img/bra.jpeg';
+    } 
+    // Se a imagem atual for Brasil, queremos mudar para PORTUGUÊS e mostrar a bandeira dos EUA
+    else {
+        updateTexts('pt');
+        flagImg.src = 'img/eua.png';
+    }
 }
 
-/* Salva e aplica o idioma */
-function setLang(lang) {
-  localStorage.setItem('smd-lang', lang);
-  applyTranslations(lang);
-  updateLangToggle(lang);
-  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+function updateTexts(lang) {
+    // 2. Procura todos os elementos com data-i18n e aplica a tradução do seu objeto translations
+    var elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        var translation = translations[lang][key];
+
+        if (translation) {
+            // Se for um input (como o formulário de contato), traduz o placeholder
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translation;
+            } else {
+                el.innerText = translation;
+            }
+        }
+    });
 }
 
-/* Aplica todas as traduções na página */
-function applyTranslations(lang) {
-  var t = translations[lang];
-  if (!t) return;
+/* ============================================
+   ENGINE DE TRADUÇÃO
+   ============================================ */
 
-  /* Texto simples */
-  document.querySelectorAll('[data-i18n]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) el.textContent = t[key];
-  });
-
-  /* Placeholders de inputs */
-  document.querySelectorAll('[data-i18n-ph]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n-ph');
-    if (t[key] !== undefined) el.placeholder = t[key];
-  });
-
-  /* Atributo title (tooltips) */
-  document.querySelectorAll('[data-i18n-title]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n-title');
-    if (t[key] !== undefined) el.title = t[key];
-  });
+function traduzirPagina() {
+    const flagImg = document.querySelector('.flag-img');
+    
+    // Se a imagem atual é EUA, mudamos para INGLÊS e mostramos bandeira do Brasil
+    if (flagImg.src.includes('eua.png')) {
+        aplicarTraducao('en');
+        flagImg.src = 'img/bra.jpeg';
+    } 
+    // Se a imagem é Brasil, mudamos para PORTUGUÊS e mostramos bandeira dos EUA
+    else {
+        aplicarTraducao('pt');
+        flagImg.src = 'img/eua.png';
+    }
 }
 
-/* Atualiza a aparência do botão de idioma */
-function updateLangToggle(lang) {
-  var btn = document.getElementById('lang-toggle');
-  if (!btn) return;
-  if (lang === 'pt') {
-    btn.innerHTML = '<span class="flag">🇺🇸</span><span class="lang-code">EN</span>';
-    btn.title = 'Switch to English';
-  } else {
-    btn.innerHTML = '<span class="flag">🇧🇷</span><span class="lang-code">PT</span>';
-    btn.title = 'Mudar para Português';
-  }
+function aplicarTraducao(lang) {
+    // Busca todos os elementos que têm o atributo data-i18n
+    const elements = document.querySelectorAll('[data-i18n]');
+
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const text = translations[lang][key];
+
+        if (text) {
+            // Se for um input ou textarea, traduz o placeholder
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = text;
+            } else {
+                // Para os demais (h1, p, a, span), traduz o texto interno
+                el.innerText = text;
+            }
+        }
+    });
 }
-
-/* Alterna o idioma ao clicar */
-function toggleLang() {
-  var current = getLang();
-  setLang(current === 'pt' ? 'en' : 'pt');
-}
-
-/* Inicializa ao carregar a página */
-document.addEventListener('DOMContentLoaded', function () {
-  var lang = getLang();
-  applyTranslations(lang);
-  updateLangToggle(lang);
-  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-});
-
