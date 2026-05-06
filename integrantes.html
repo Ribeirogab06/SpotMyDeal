@@ -44,21 +44,20 @@
     }
 
     .member-avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background: var(--dark3);
-      border: 2px solid var(--border-strong);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--cyan);
-      margin-bottom: 20px;
-      box-shadow: 0 0 24px var(--cyan-glow);
-    }
+  width: 97px;        /* ajuste conforme seu layout */
+  height: 97px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* garante que a imagem preencha o círculo */
+}
 
     .member-name {
       font-family: var(--font-display);
@@ -130,7 +129,7 @@
     .link-placeholder {
       opacity: 0.4;
       cursor: not-allowed;
-      pointer-events: none;
+      pointer-events: all;
     }
 
     .turma-badge {
@@ -200,16 +199,17 @@
 
           <!-- Gabriel -->
           <article class="member-card">
-            <div class="member-avatar">GA</div>
+            <div class="member-avatar">
+            <img src="./img/EU.jpeg" alt="Gabriel Augusto"> </div>
             <div class="member-rm">RM 573120</div>
             <h2 class="member-name">Gabriel Augusto</h2>
-            <span class="turma-badge">2TDSB · FIAP 2025</span>
-            <p class="member-turma">Desenvolvimento Backend · Arquitetura da Solução</p>
+            <span class="turma-badge">1TDSPW · FIAP 2026</span>
+            <p class="member-turma">Front-End · Interface & Experiência do Usuário · Design de Gamificação</p>
             <div class="member-links">
               <a href="https://www.linkedin.com/in/gabrielribeiro-backend-developer/" target="_blank" class="member-link link-linkedin">
                 in LinkedIn
               </a>
-              <a href="#" class="member-link link-github link-placeholder" aria-label="GitHub em breve">
+              <a href="https://github.com/Ribeirogab06" target="_blank" class="member-link link-github">
                 ⌥ GitHub
               </a>
             </div>
@@ -217,50 +217,53 @@
 
           <!-- Nycolas -->
           <article class="member-card">
-            <div class="member-avatar">NM</div>
+            <div class="member-avatar">
+            <img src="./img/escobar.png" alt="Nycoas Escobar"> </div>
             <div class="member-rm">RM 573052</div>
-            <h2 class="member-name">Nycolas Melo Escobar</h2>
-            <span class="turma-badge">2TDSB · FIAP 2025</span>
-            <p class="member-turma">Front-End · Interface & Experiência do Usuário</p>
+            <h2 class="member-name">Nycolas Escobar</h2>
+            <span class="turma-badge">1TDSPW · FIAP 2026</span>
+            <p class="member-turma">Produto & Estratégia</p>
             <div class="member-links">
               <a href="https://www.linkedin.com/in/nycolas-melo-escobar-983376391/" target="_blank" class="member-link link-linkedin">
                 in LinkedIn
               </a>
-              <a href="#" target="_blank" class="member-link link-github">
+              <a href="https://github.com/Nycolas10072006" target="_blank" class="member-link link-github">
                 ⌥ GitHub
-              </a>
+              </a> 
             </div>
           </article>
 
           <!-- Rodrigo -->
           <article class="member-card">
-            <div class="member-avatar">RB</div>
+            <div class="member-avatar">
+            <img src="./img/rodrigo.png" alt="Rodrigo"> </div>
             <div class="member-rm">RM 570539</div>
-            <h2 class="member-name">Rodrigo Banharelli de Souza</h2>
-            <span class="turma-badge">2TDSB · FIAP 2025</span>
-            <p class="member-turma">Produto & Estratégia · Design de Gamificação</p>
+            <h2 class="member-name">Rodrigo Banharelli</h2>
+            <span class="turma-badge">1TDSPW · FIAP 2026</span>
+            <p class="member-turma">Desenvolvimento Back-end</p>
             <div class="member-links">
               <a href="https://www.linkedin.com/in/rodrigo-banharelli/" target="_blank" class="member-link link-linkedin">
                 in LinkedIn
               </a>
-              <a href="#" target="_blank" class="member-link link-github">
+              <a href="https://github.com/RodrigoBanharelli" target="_blank" class="member-link link-github">
                 ⌥ GitHub
-              </a>
+              </a> 
             </div>
           </article>
 
           <!-- Tayna -->
           <article class="member-card">
-            <div class="member-avatar">TJ</div>
+            <div class="member-avatar">
+            <img src="./img/tay.png" alt="tay"> </div>
             <div class="member-rm">RM 569337</div>
-            <h2 class="member-name">Tayna Jimenes Silva</h2>
-            <span class="turma-badge">2TDSB · FIAP 2025</span>
+            <h2 class="member-name">Tayna Jimenes</h2>
+            <span class="turma-badge">1TDSPW · FIAP 2026</span>
             <p class="member-turma">UX Research · Comunicação & Conteúdo</p>
             <div class="member-links">
               <a href="https://www.linkedin.com/in/tayna-jimenes/" target="_blank" class="member-link link-linkedin">
                 in LinkedIn
               </a>
-              <a href="#" target="_blank" class="member-link link-github">
+              <a href="https://github.com/TaynaJimenes" target="_blank" class="member-link link-github">
                 ⌥ GitHub
               </a>
             </div>
@@ -304,7 +307,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="color: var(--text-muted);">© 2025 SpotMyDeal · Projeto FIAP · Todos os direitos reservados.</p>
+        <p style="color: var(--text-muted);">© 2026 SpotMyDeal · Projeto FIAP · Todos os direitos reservados.</p>
         <span class="footer-badge">FIAP · 1º SPRINT</span>
       </div>
     </div>
