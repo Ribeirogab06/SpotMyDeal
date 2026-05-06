@@ -445,3 +445,43 @@ footer {
   background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
   pointer-events: none;
 }
+
+.lang-toggle {
+    background-color: #0b161a;
+    border: 2px solid #00ced1; /* A borda azul que você quer */
+    
+    /* 1. Removemos o padding para a imagem encostar na borda */
+    padding: 0; 
+    
+    /* 2. Definimos um tamanho fixo para o botão */
+    width: 60px;  /* Ajuste a largura conforme preferir */
+    height: 35px; /* Ajuste a altura conforme preferir */
+    
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    /* 3. ESSENCIAL: Corta o que sobrar da imagem para seguir o redondo */
+    overflow: hidden; 
+    
+    transition: all 0.3s ease;
+}
+
+.flag-img {
+    /* 4. Faz a imagem cobrir o botão todo */
+    width: 100%;
+    height: 100%;
+    
+    /* 5. Garante que a imagem não estique, mas preencha o espaço */
+    object-fit: cover; 
+    
+    display: block;
+}
+
+/* Efeito de hover opcional para manter o estilo neon */
+.lang-toggle:hover {
+    box-shadow: 0 0 10px #00ced1;
+    transform: scale(1.05);
+}
