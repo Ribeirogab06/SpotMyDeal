@@ -1,14 +1,13 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="SpotMyDeal — Encontre seu cupom. Gamificação de cupons de desconto com loot tracker. Projeto FIAP x SoulUp." />
+    content="SpotMyDeal — Encontre seu cupom. Gamificação de cupons de desconto com loot tracker. Projeto FIAP x SoulUp.">
   <title>SpotMyDeal — Encontre Seu Cupom</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <style>
     /* === HERO === */
     .hero {
@@ -474,27 +473,28 @@
           <span class="nav-logo-text">Spot<span>My</span>Deal</span>
         </a>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="solucao.html">Solução</a></li>
-          <li><a href="demo.html">Demo</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="integrantes.html">Equipe</a></li>
-          <li><a href="contato.html" class="nav-cta">Contato</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="sobre.html"data-i18n="nav.about">Sobre</a></li>
+          <li><a href="solucao.html"data-i18n="nav.solution">Solução</a></li>
+          <li><a href="demo.html"data-i18n="nav.demo">Demo</a></li>
+          <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="integrantes.html" data-i18n="nav.team">Equipe</a></li>
+          <li><a href="contato.html" class="nav-cta" data-i18n="contact.h1">Contato</a></li>
         </ul>
         <button id="lang-toggle" class="lang-toggle" onclick="traduzirPagina()">
-    <img src="img/eua.png" class="flag-img" alt="Traduzir">
-</button>
-<script src="js/troca.js"></script>
-    </div>
-    <div class="mobile-nav">
-      <a href="index.html">Início</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="solucao.html">Solução</a>
-      <a href="demo.html">Demo</a>
-      <a href="faq.html">FAQ</a>
-      <a href="integrantes.html">Equipe</a>
-      <a href="contato.html">Contato</a>
+          <img src="img/eua.png" class="flag-img" alt="Traduzir">
+        </button>
+        <script src="js/troca.js"></script>
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html" class="active" data-i18n="nav.home">Início</a>
+        <a href="sobre.html" data-i18n="nav.about">Sobre</a>
+        <a href="solucao.html" data-i18n="nav.solution">Solução</a>
+        <a href="demo.html" data-i18n="nav.demo">Demo</a>
+        <a href="faq.html" data-i18n="faq.h1">FAQ</a>
+        <a href="integrantes.html" data-i18n="contact.team.label">Equipe</a>
+        <a href="contato.html" data-i18n="contact.h1">Contato</a>
+      </div>
     </div>
   </nav>
 
@@ -508,12 +508,14 @@
         <div class="hero-content">
           <div class="hero-eyebrow">
             <div class="hero-dot"></div>
-            <span>Gamificação · Sustentabilidade · Cupons</span>
+            <span data-i18n="home.eyebrow">GAMIFICAÇÃO · SUSTENTABILIDADE · CUPONS</span>
           </div>
           <h1>Encontre<br><span class="highlight">Seu Cupom.</span><br>Vença a Disputa.</h1>
           <p class="hero-sub">DEAL HUNTING · SoulUp x FIAP</p>
-          <p>Dispute cupons de desconto em tempo real com outros players. Colete, vença e converta seus pontos em
-            benefícios reais — enquanto contribui com o meio ambiente.</p>
+          <p data-i18n="home.desc">
+            Dispute cupons de desconto em tempo real com outros players. Colete, vença e converta seus pontos em
+            benefícios reais — enquanto contribui com o meio ambiente.
+          </p>
           <div class="hero-actions">
             <a href="solucao.html" class="btn btn-primary">Ver a Solução →</a>
             <a href="demo.html" class="btn btn-outline">Experimentar Demo</a>
@@ -574,16 +576,16 @@
       <div class="container">
         <div class="hero-stats">
           <div class="stat-item">
-            <span class="stat-num">+3.2k</span>
-            <span class="stat-label">Usuários Ativos</span>
+            <span class="stat-num" data-i18n="home.stat1.num">+3.2k</span>
+            <span class="stat-label" data-i18n="home.stat1.label">Usuários Ativos</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">87%</span>
-            <span class="stat-label">Taxa de Reativação</span>
+            <span class="stat-num" data-i18n="home.stat2.num">87%</span>
+            <span class="stat-label" data-i18n="home.stat2.label">Taxa de Reativação</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">CO₂↓</span>
-            <span class="stat-label">Impacto Ambiental</span>
+            <span class="stat-num" data-i18n="home.stat3.num">CO₂↓</span>
+            <span class="stat-label" data-i18n="home.stat3.label">Impacto Ambiental</span>
           </div>
         </div>
       </div>
@@ -594,27 +596,31 @@
       <div class="container">
         <span class="section-label">Como funciona</span>
         <h2 class="section-title">Três passos para <span>vencer</span></h2>
-        <p class="section-desc">O mecanismo de loot tracker transforma a coleta de cupons em uma experiência de disputa
+        <p class="section-desc" data-i18n="home.how.desc">O mecanismo de loot tracker transforma a coleta de cupons em
+          uma experiência de disputa
           real entre players.</p>
         <div class="how-grid grid-3">
           <div class="how-card">
             <div class="how-num">01</div>
             <div class="card-icon">♻️</div>
-            <h3>Descarte & Pontue</h3>
-            <p>Descarte resíduos nos pontos parceiros da SoulUp e acumule pontos no seu perfil de player.</p>
+            <h3>Descarte &amp; Pontue</h3>
+            <p data-i18n="home.step1.desc">Descarte resíduos nos pontos parceiros da SoulUp e acumule pontos no seu
+              perfil de player.</p>
           </div>
           <div class="how-card">
             <div class="how-num">02</div>
             <div class="card-icon">🎯</div>
             <h3>Dispute Cupons</h3>
-            <p>Use seus pontos para competir com outros players pela captura de cupons exclusivos de estabelecimentos
+            <p data-i18n="home.step2.desc">Use seus pontos para competir com outros players pela captura de cupons
+              exclusivos de estabelecimentos
               parceiros.</p>
           </div>
           <div class="how-card">
             <div class="how-num">03</div>
             <div class="card-icon">💰</div>
-            <h3>Converta & Ganhe</h3>
-            <p>Troque seus cupons por descontos, pague contas de energia ou converta em saldo para transporte público.
+            <h3>Converta &amp; Ganhe</h3>
+            <p data-i18n="home.step3.desc">Troque seus cupons por descontos, pague contas de energia ou converta em
+              saldo para transporte público.
             </p>
           </div>
         </div>
@@ -628,7 +634,8 @@
           <div>
             <span class="section-label">Impacto Real</span>
             <h2 class="section-title">Além dos <span>cupons</span></h2>
-            <p class="section-desc">O SpotMyDeal nasce da visão da SoulUp de transformar o lixo em valor real — para o
+            <p class="section-desc" data-i18n="home.impact.desc">O SpotMyDeal nasce da visão da SoulUp de transformar o
+              lixo em valor real — para o
               usuário e para o planeta.</p>
             <a href="sobre.html" class="btn btn-outline" style="margin-top: 8px;">Saiba mais sobre o projeto</a>
           </div>
@@ -636,29 +643,29 @@
             <div class="impact-item">
               <div class="impact-icon">🌱</div>
               <div class="impact-info">
-                <strong>Redução de CO₂</strong>
-                <span>Cada descarte correto impacta diretamente a emissão de carbono</span>
+                <strong data-i18n="home.i1.title">Redução de CO₂</strong>
+                <span data-i18n="home.i1.desc">Cada descarte correto impacta diretamente a emissão de carbono</span>
               </div>
             </div>
             <div class="impact-item">
               <div class="impact-icon">🔄</div>
               <div class="impact-info">
-                <strong>Upcycling</strong>
-                <span>Transformando resíduos de baixo valor em pontos de alto valor</span>
+                <strong data-i18n="home.i2.title">Upcycling</strong>
+                <span data-i18n="home.i2.desc">Transformando resíduos de baixo valor em pontos de alto valor</span>
               </div>
             </div>
             <div class="impact-item">
               <div class="impact-icon">⚡</div>
               <div class="impact-info">
-                <strong>Energia & Mobilidade</strong>
-                <span>Pontos convertíveis em créditos de energia e transporte público</span>
+                <strong data-i18n="home.i3.title">Energia &amp; Mobilidade</strong>
+                <span data-i18n="home.i3.desc">Pontos convertíveis em créditos de energia e transporte público</span>
               </div>
             </div>
             <div class="impact-item">
               <div class="impact-icon">🎮</div>
               <div class="impact-info">
-                <strong>Gamificação</strong>
-                <span>Gatilhos de ancoragem, comparação e disputa para engajar usuários</span>
+                <strong data-i18n="home.i4.title">Gamificação</strong>
+                <span data-i18n="home.i4.desc">Gatilhos de ancoragem, comparação e disputa para engajar usuários</span>
               </div>
             </div>
           </div>
@@ -671,7 +678,8 @@
       <div class="container">
         <div class="glow-line" style="margin: 0 auto 24px;"></div>
         <h2 class="section-title" style="color: var(--white);">Pronto para <span>disputar?</span></h2>
-        <p style="margin: 0 auto 40px; max-width: 500px;">Veja como o loot tracker funciona na prática e entenda por que
+        <p style="margin: 0 auto 40px; max-width: 500px;" data-i18n="home.cta.desc">Veja como o loot tracker funciona na
+          prática e entenda por que
           os usuários não conseguem ficar de fora.</p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <a href="demo.html" class="btn btn-primary">Experimentar Demo</a>
@@ -691,39 +699,80 @@
             <div class="nav-logo-icon">S</div>
             <span class="nav-logo-text">Spot<span>My</span>Deal</span>
           </a>
-          <p>Gamificação de cupons para atração e reativação de usuários. Um projeto FIAP em parceria com a SoulUp.</p>
+          <p data-i18n="footer.desc">Gamificação de cupons para atração e reativação de usuários. Um projeto FIAP em
+            parceria com a SoulUp.</p>
         </div>
         <div class="footer-col">
           <h4>Navegação</h4>
           <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="solucao.html">Solução</a></li>
-            <li><a href="demo.html">Demo</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="integrantes.html">Equipe</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+            <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+            <li><a href="solucao.html" data-i18n="nav.solution">Solução</a></li>
+            <li><a href="demo.html" data-i18n="nav.demo">Demo</a></li>
+            <li><a href="faq.html" data-i18n="faq.h1">FAQ</a></li>
+            <li><a href="integrantes.html" data-i18n="contact.team.label">Equipe</a></li>
+            <li><a href="contato.html" data-i18n="contact.h1">Contato</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Projeto</h4>
           <ul>
-            <li><a href="sobre.html#contexto">Contexto SoulUp</a></li>
-            <li><a href="solucao.html#mecanismo">Loot Tracker</a></li>
-            <li><a href="solucao.html#gatilhos">Gatilhos Psicológicos</a></li>
-            <li><a href="demo.html">Demonstração</a></li>
+            <li><a href="sobre.html#contexto" data-i18n="footer.context">Contexto SoulUp</a></li>
+            <li><a href="solucao.html#mecanismo" data-i18n="demo.h1">Loot Tracker</a></li>
+            <li><a href="solucao.html#gatilhos" data-i18n="footer.triggers">Gatilhos Psicológicos</a></li>
+            <li><a href="demo.html" data-i18n="footer.demo">Demonstração</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p style="color: var(--text-muted);">© 2026 SpotMyDeal · Projeto FIAP · Todos os direitos reservados.</p>
-        <span class="footer-badge">FIAP · 1º SPRINT</span>
+        <span class="footer-badge" data-i18n="footer.badge">FIAP · 1º SPRINT</span>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
- 
+  <script src="js/i18n.js"></script>
+  <!-- Code injected by live-server -->
+  <script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+
+
 </body>
 
 </html>
