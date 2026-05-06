@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Solução SpotMyDeal — Loot Tracker, gatilhos psicológicos e mecanismo de gamificação." />
+  <meta name="description"
+    content="Solução SpotMyDeal — Loot Tracker, gatilhos psicológicos e mecanismo de gamificação." />
   <title>Solução — SpotMyDeal</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
@@ -29,7 +31,9 @@
     .gatilho-card::after {
       content: '';
       position: absolute;
-      bottom: 0; left: 0; right: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: linear-gradient(90deg, var(--cyan), transparent);
     }
@@ -37,7 +41,7 @@
     .gatilho-card:hover {
       border-color: var(--border-strong);
       transform: translateY(-6px);
-      box-shadow: 0 24px 48px rgba(0,0,0,0.3), 0 0 40px var(--cyan-glow);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3), 0 0 40px var(--cyan-glow);
     }
 
     .gatilho-num {
@@ -111,7 +115,9 @@
       margin-bottom: 8px;
     }
 
-    .step-item p { font-size: 0.82rem; }
+    .step-item p {
+      font-size: 0.82rem;
+    }
 
     /* BENEFÍCIOS */
     .benefits-grid {
@@ -169,8 +175,10 @@
     .cupom-card::before {
       content: '';
       position: absolute;
-      top: 50%; left: -12px;
-      width: 24px; height: 24px;
+      top: 50%;
+      left: -12px;
+      width: 24px;
+      height: 24px;
       background: var(--dark);
       border-radius: 50%;
       transform: translateY(-50%);
@@ -179,8 +187,10 @@
     .cupom-card::after {
       content: '';
       position: absolute;
-      top: 50%; right: -12px;
-      width: 24px; height: 24px;
+      top: 50%;
+      right: -12px;
+      width: 24px;
+      height: 24px;
       background: var(--dark);
       border-radius: 50%;
       transform: translateY(-50%);
@@ -233,15 +243,15 @@
     }
 
     .status-live {
-      background: rgba(0,230,118,0.12);
+      background: rgba(0, 230, 118, 0.12);
       color: #00e676;
-      border: 1px solid rgba(0,230,118,0.3);
+      border: 1px solid rgba(0, 230, 118, 0.3);
     }
 
     .status-hot {
-      background: rgba(255,100,50,0.12);
+      background: rgba(255, 100, 50, 0.12);
       color: #ff6432;
-      border: 1px solid rgba(255,100,50,0.3);
+      border: 1px solid rgba(255, 100, 50, 0.3);
     }
 
     .status-rare {
@@ -251,18 +261,35 @@
     }
 
     @media (max-width: 900px) {
-      .gatilhos-grid { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: 1fr 1fr; }
-      .steps-grid::before { display: none; }
-      .cupom-showcase { grid-template-columns: 1fr; }
-      .benefits-grid { grid-template-columns: 1fr; }
+      .gatilhos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps-grid::before {
+        display: none;
+      }
+
+      .cupom-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 480px) {
-      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <nav class="navbar">
@@ -301,8 +328,12 @@
     <section class="page-hero">
       <div class="container">
         <span class="section-label">A Solução</span>
-        <h1> Sistema <br> Loot <span style="color:var(--cyan)">Tracker</span></h1>
-        <p style="max-width: 600px; margin-top: 16px;">Um mecanismo de gamificação que transforma a coleta de cupons em disputa real entre players — usando gatilhos psicológicos para criar engajamento genuíno.</p>
+        <h1>
+          Sistema
+          <span class="block-text">Loot <span style="color:var(--cyan)">Tracker</span></span>
+        </h1>
+        <p style="max-width: 600px; margin-top: 16px;">Um mecanismo de gamificação que transforma a coleta de cupons em
+          disputa real entre players — usando gatilhos psicológicos para criar engajamento genuíno.</p>
       </div>
     </section>
 
@@ -310,36 +341,43 @@
       <div class="container">
         <span class="section-label">Psicologia por trás</span>
         <h2 class="section-title">Os 3 <span>gatilhos</span> do sistema</h2>
-        <p class="section-desc">Não é sorte — é ciência comportamental. Cada gatilho foi escolhido para gerar uma resposta psicológica específica no usuário.</p>
+        <p class="section-desc">Não é sorte — é ciência comportamental. Cada gatilho foi escolhido para gerar uma
+          resposta psicológica específica no usuário.</p>
 
         <div class="gatilhos-grid grid-3">
           <div class="gatilho-card">
             <div class="gatilho-num">— Gatilho 01</div>
             <span class="gatilho-emoji">⚓</span>
             <h3>Ancoragem</h3>
-            <p>O usuário vê os cupons disponíveis e o que outros já conquistaram. Isso cria uma referência mental do que ele "deveria ter" — gerando desejo imediato de participar.</p>
+            <p>O usuário vê os cupons disponíveis e o que outros já conquistaram. Isso cria uma referência mental do que
+              ele "deveria ter" — gerando desejo imediato de participar.</p>
           </div>
           <div class="gatilho-card">
             <div class="gatilho-num">— Gatilho 02</div>
             <span class="gatilho-emoji">📊</span>
             <h3>Comparação</h3>
-            <p>O ranking em tempo real mostra exatamente onde o usuário está em relação aos outros players. A posição no leaderboard se torna uma métrica de status social.</p>
+            <p>O ranking em tempo real mostra exatamente onde o usuário está em relação aos outros players. A posição no
+              leaderboard se torna uma métrica de status social.</p>
           </div>
           <div class="gatilho-card">
             <div class="gatilho-num">— Gatilho 03</div>
             <span class="gatilho-emoji">⚔️</span>
             <h3>Disputa</h3>
-            <p>Os cupons são limitados e disputados em tempo real. O senso de urgência e a possibilidade de "perder para outro player" cria desconforto que motiva a ação.</p>
+            <p>Os cupons são limitados e disputados em tempo real. O senso de urgência e a possibilidade de "perder para
+              outro player" cria desconforto que motiva a ação.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" style="background: var(--dark2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" id="mecanismo">
+    <section class="section"
+      style="background: var(--dark2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);"
+      id="mecanismo">
       <div class="container">
         <span class="section-label">Como funciona</span>
         <h2 class="section-title text-center" style="text-align:center;">O mecanismo <span>passo a passo</span></h2>
-        <p class="section-desc text-center" style="text-align:center; margin: 0 auto 60px;">Do descarte do resíduo até a conversão do cupom em benefício real.</p>
+        <p class="section-desc text-center" style="text-align:center; margin: 0 auto 60px;">Do descarte do resíduo até a
+          conversão do cupom em benefício real.</p>
 
         <div class="steps-grid">
           <div class="step-item">
@@ -403,21 +441,24 @@
             <span class="benefit-icon">👤</span>
             <div>
               <h4>Para o Usuário</h4>
-              <p>Descontos reais, experiência gamificada, senso de progresso e recompensa tangível pelo descarte correto.</p>
+              <p>Descontos reais, experiência gamificada, senso de progresso e recompensa tangível pelo descarte
+                correto.</p>
             </div>
           </div>
           <div class="benefit-item">
             <span class="benefit-icon">🏢</span>
             <div>
               <h4>Para a SoulUp</h4>
-              <p>Aquisição de novos usuários, reativação de perfis inativos e aumento do volume de descartes na plataforma.</p>
+              <p>Aquisição de novos usuários, reativação de perfis inativos e aumento do volume de descartes na
+                plataforma.</p>
             </div>
           </div>
           <div class="benefit-item">
             <span class="benefit-icon">🤝</span>
             <div>
               <h4>Para Parceiros</h4>
-              <p>Novo canal de marketing baseado em performance — cupons que só chegam a usuários altamente motivados.</p>
+              <p>Novo canal de marketing baseado em performance — cupons que só chegam a usuários altamente motivados.
+              </p>
             </div>
           </div>
           <div class="benefit-item">
@@ -477,4 +518,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -485,3 +485,7 @@ footer {
     box-shadow: 0 0 10px #00ced1;
     transform: scale(1.05);
 }
+
+.block-text {
+  display: block;
+}
